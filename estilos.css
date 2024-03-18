@@ -1,0 +1,331 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #252525;
+}
+
+.logo {
+    width: 10%;
+    margin-left: 90px;
+    margin-right: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+    .logo {
+        margin-left: auto;
+        /* Empuja el logo hacia la derecha */
+        display: block;
+        /* Asegura que el logo se trate como un bloque para aplicar márgenes automáticamente */
+        margin-right: 150px;
+        width: 50px;
+    }
+}
+
+
+/* Personalización de la barra de navegación */
+.navbar-custom {
+    background-color: #252525;
+    /* Color de fondo negro */
+}
+
+/* Personalizar los enlaces de la barra de navegación */
+.navbar-custom .nav-link {
+    color: #ffffff;
+    /* Color de texto blanco para los enlaces */
+}
+
+/* Personalizar el botón del menú hamburguesa */
+.navbar-custom .navbar-toggler {
+    border: none;
+    /* Eliminar el borde del botón */
+    margin-top: -50px;
+
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Icono de menú hamburguesa personalizado en blanco */
+}
+
+/* Cambiar el color de los enlaces al pasar el mouse sobre ellos */
+.navbar-custom .nav-link:hover {
+    color: #32bd3d;
+    /* Color del texto al pasar el mouse */
+}
+
+
+
+.custom-margin {
+    margin-right: 200px;
+    /* Ajusta este valor según necesites */
+}
+
+.container-fluid {
+    background-color: #252525;
+}
+
+
+h1 {
+    color: #000000;
+    /* Color inicial del texto */
+    transition: color 0.5s ease-in-out;
+    /* Transición suave del color */
+    margin-top: 20px;
+}
+
+h1:hover {
+    color: #157c1e;
+    /* Color del texto al pasar el mouse */
+}
+
+.fondo {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.titulotexto {
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.estudiante {
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 45px;
+
+
+}
+
+.cta-button {
+    margin-top: 30px;
+    margin-right: 40px;
+    display: inline-block;
+    /* O block si prefieres que ocupe todo el ancho disponible */
+    padding: 10px 20px;
+    /* Espacio alrededor del texto */
+    margin: 10px 0;
+    /* Espacio alrededor del botón */
+    background-color: #157c1e;
+    /* Un color de fondo azul */
+    color: white;
+    /* Texto en color blanco para contraste */
+    text-align: center;
+    text-decoration: none;
+    /* Quitar el subrayado del enlace */
+    font-size: 18px;
+    /* Un tamaño de fuente más grande para resaltar */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s;
+    /* Transición suave para el hover */
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #0e4e13;
+    /* Un color de fondo azul */
+    color: #ffffff;
+    /* Mantener el texto en blanco */
+    text-decoration: none;
+    /* Seguir sin subrayado */
+    cursor: pointer;
+}
+
+.mifoto {
+    width: 320px;
+    margin-left: 250px;
+    border-radius: 40px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    margin-right: 80px;
+    transition: transform 0.5s ease;
+    /* Esta es la clave para la animación suave */
+    transition: opacity 0.5s ease;
+    /* Animación suave */
+    opacity: 1;
+    /* Opacidad inicial completa */
+
+
+}
+
+.mifoto:hover {
+    transform: scale(1.1);
+    /* Ajusta el 1.1 al factor de escala deseado */
+    opacity: 0.90;
+    /* Cambia a una opacidad del 50% cuando el mouse pasa sobre la imagen */
+}
+
+@media (max-width: 768px) {
+    .mifoto {
+        margin-top: 20px;
+        /* Ajusta este valor para bajar la foto */
+        /* Otros estilos que quieras modificar en responsive */
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    /* Bootstrap md breakpoint */
+    .custom-mt-md {
+        margin-top: 20px;
+        /* Cambia el valor de 20px al margen que desees */
+    }
+}
+
+.experienciatitulos {
+    font-size: 25px;
+    text-align: center;
+
+}
+
+
+
+.colorcolegio {
+    background-color: #d3e496;
+    color: #252525;
+    width: 16rem;
+    /* Ajusta el ancho a tu preferencia */
+    padding: -60px;
+    /* Ajusta el relleno interno */
+    border-radius: 20px 20px 20px 20px;
+}
+
+.colorcolegio2 {
+    background-color: #ee66fa;
+    color: #252525;
+    width: 16rem;
+    /* Ajusta el ancho a tu preferencia */
+    border-radius: 20px 20px 20px 20px;
+
+}
+
+.colegiograduados {
+    margin-left: -12px;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+
+}
+
+.colorsection {
+    background-color: #252525;
+    margin-bottom: -16px;
+}
+
+.herramientastituilo {
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* CTA HERRAMIENTAS */
+
+.cta-container {
+    display: flex;
+    /* Alinea horizontalmente el icono y el texto */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    background-color: #d3e496;
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interno */
+    width: 200px;
+    /* Ancho del icono SVG */
+
+}
+
+.cta-icon {
+    width: 30px;
+    /* Ancho del icono SVG */
+    height: 30px;
+    /* Altura del icono SVG */
+    margin-right: 5px;
+    /* Espacio entre el icono y el texto */
+}
+
+.cta-iconcinema {
+    width: 120px;
+    /* Ancho del icono SVG */
+    height: 30px;
+    /* Altura del icono SVG */
+    margin-right: 5px;
+    /* Espacio entre el icono y el texto */
+}
+
+.cta-text {
+    margin: 0px;
+    /* Remueve el margen por defecto del párrafo */
+}
+
+/* FIN CTA HERRAMIENTAS */
+
+.icondominio {
+    width: 45px;
+}
+
+.icondominiobootstrap {
+    width: 60px;
+    margin-right: -5px;
+}
+
+.icondominiofigma {
+    width: 35px;
+}
+
+.bootstraptext {
+    margin-top: 2px;
+    color: #ffffff;
+}
+
+.carrouselcolor {
+    background-color: #252525;
+    color: #ffffff;
+}
+
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.santjordi {
+    color: #252525;
+}
+
+footer {
+    background-color: #252525;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-logo{
+    width: 40px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    /* para que cada enlace sea en una línea nueva */
+}
+
+.numerodetelefono{}
