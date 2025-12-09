@@ -1,0 +1,168 @@
+/* ============================= */
+/* HERO: reveal + blob + botones */
+/* ============================= */
+
+/* Movimiento suave del blob */
+.hero-portrait-wrapper {
+  transform-origin: center;
+}
+
+.hero-blob {
+  animation: blobFloatSoft 12s ease-in-out infinite alternate;
+}
+
+@keyframes blobFloatSoft {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-6px, -10px, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(4px, 6px, 0) scale(1.01);
+  }
+}
+
+/* Leve interacción en CTAs */
+.btn-av-primary,
+.btn-av-outline {
+  transition:
+    transform 0.2s cubic-bezier(0.2, 0.9, 0.35, 1),
+    box-shadow 0.2s ease-out;
+}
+
+.btn-av-primary:hover,
+.btn-av-outline:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================= */
+/* SISTEMA GENERAL DE REVEALS    */
+/* ============================= */
+
+/* Estado inicial: oculto */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.6s cubic-bezier(0.2, 0.9, 0.35, 1),
+    transform 0.6s cubic-bezier(0.2, 0.9, 0.35, 1);
+}
+
+/* Variantes de entrada (estado inicial) */
+.slide-left {
+  transform: translateX(-60px);
+}
+
+.slide-right {
+  transform: translateX(60px);
+}
+
+/* Cards de servicios: fade + slide up + leve scale */
+.service-up {
+  transform: translateY(40px) scale(0.96);
+}
+
+/* Estado visible: se ve y vuelve a su lugar */
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+}
+
+/* Stagger / delays */
+.reveal-delay-1 { transition-delay: 0.10s; }
+.reveal-delay-2 { transition-delay: 0.20s; }
+.reveal-delay-3 { transition-delay: 0.30s; }
+.reveal-delay-4 { transition-delay: 0.40s; }
+.reveal-delay-5 { transition-delay: 0.50s; }
+.reveal-delay-6 { transition-delay: 0.60s; }
+.reveal-delay-7 { transition-delay: 0.70s; }
+/* ============================= */
+/* HOVER EXTRA PARA SERVICIOS    */
+/* ============================= */
+
+.card-av--services:hover {
+  transform: translateY(-4px);
+  transition: transform 0.25s ease-out;
+}
+/* Variante para los pasos del proceso: suben suave con un pelín de scale */
+.step-up {
+  transform: translateY(30px) scale(0.97);
+}
+
+
+/* ============================================
+   CTA CONTACTO — ANIMACIÓN DE ENTRADA
+   ============================================ */
+
+/* Estado inicial: la card aparece desde abajo y un poco más chica */
+.cta-pop {
+  transform: translateY(24px) scale(0.96);
+}
+
+/* Ya tenés algo como esto:
+   .reveal-item {
+     opacity: 0;
+     transition: all .9s cubic-bezier(.22,1,.36,1);
+   }
+   .reveal-item.is-visible {
+     opacity: 1;
+     transform: translateX(0) translateY(0) scale(1);
+   }
+   entonces .cta-pop usa ese estado final 😉 */
+
+/* Hover suave para toda la card */
+.cta-card {
+  transition:
+    transform 0.28s ease-out,
+    box-shadow 0.28s ease-out,
+    border-color 0.28s ease-out;
+}
+
+.cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(148, 163, 184, 0.4);
+  border-color: rgba(148, 163, 184, 0.7);
+}
+
+
+/* --- WRAPPER --- */
+.carousel-animate {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: carousel-enter 0.8s ease-out forwards;
+}
+
+@keyframes carousel-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- ITEMS (CARDS) --- */
+.carousel-item-card {
+  opacity: 0;
+  transform: translateY(20px) scale(0.96);
+  animation: card-enter 0.6s ease-out forwards;
+}
+
+/* Animación de cada card */
+@keyframes card-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Stagger: entra una después de otra */
+.carousel-item-card:nth-child(1) { animation-delay: 0.15s; }
+.carousel-item-card:nth-child(2) { animation-delay: 0.25s; }
+.carousel-item-card:nth-child(3) { animation-delay: 0.35s; }
+.carousel-item-card:nth-child(4) { animation-delay: 0.45s; }
+.carousel-item-card:nth-child(5) { animation-delay: 0.55s; }
+.carousel-item-card:nth-child(6) { animation-delay: 0.65s; }
+.carousel-item-card:nth-child(7) { animation-delay: 0.75s; }
